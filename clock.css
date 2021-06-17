@@ -1,0 +1,141 @@
+#supercontainer{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height:100vh;
+     /* ------------Another background-------------
+    background: rgb(121,16,212);
+    background: radial-gradient(circle, rgba(121,16,212,1) 0%, rgba(158,6,6,1) 82%, rgba(25,21,13,1) 95%); 
+    */
+    background: rgb(212,203,16);
+    background: radial-gradient(circle, rgba(212,203,16,1) 22%, rgba(255,62,62,1) 60%, rgba(138,18,18,1) 85%);
+}
+#container{
+    position: relative;
+    top:150px;
+    width:40vw;
+    height:40vh;
+    background-color: #111;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    border-radius:20px;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.1s;
+}
+#clock{
+    position: absolute;
+    width:85%;
+    height: 65%;
+    text-align: center;
+    vertical-align: 100px;
+    font-size: 7.5em;
+    padding-top:20px;
+    background-color: #222;
+    color: cyan;
+    overflow: hidden;
+    border-radius:20px;
+    animation-name: clockanimation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-direction: alternate;
+}
+@keyframes clockanimation{
+    0%{
+        background-color: #160a0a;
+    }
+    20%{
+        background-color: #380915;
+    }
+    40%{
+        background-color: #152238;
+    }
+    60%{
+        background-color: #06170e;
+    }
+    80%{
+        background-color: #612e0b;
+    }
+    100%{
+        background-color: #160a0a;
+    }
+}
+#container:hover{
+    transform: skew(40deg) rotate(-10deg) scale(1.2) translate(-20px, 20px);
+}
+#clock:hover{
+    color: white;
+}
+@media only screen and (max-width:1200px){
+    #clock{
+        font-size: 6em;
+        padding-top:50px;
+    }
+}
+@media only screen and (max-width:1000px){
+    #clock{
+        font-size: 4.5em;
+        padding-top:30px;
+        width:80%;
+        height: 50%;
+    }
+    #container{
+        width:40vw;
+        height:30vh;
+    }
+}
+@media only screen and (max-width:800px){
+    #clock{
+        font-size: 4em;
+        padding-top:40px;
+        width: 80%;
+        height: 40%;
+    }
+    #container{
+        width:40vw;
+        height:20vh;
+    }
+}
+@media only screen and (max-width:700px){
+    #clock{
+        font-size: 2.9em;
+        padding-top:20px;
+        width: 75%;
+        height: 45%;
+    }
+    #container{
+        width:35vw;
+        height:20vh;
+    }
+}
+@media only screen and (max-width:600px){
+    #clock{
+        font-size: 2.5em;
+        padding-top:30px;
+        width: 80%;
+        height: 50%;
+    }
+    #container{
+        width:40vw;
+        height:20vh;
+    }
+}
+@media only screen and (max-width:460px){
+    #clock{
+        font-size: 2em;
+        padding-top:30px;
+        width: 82%;
+        height: 40%;
+    }
+    #container{
+        width:40vw;
+        height:20vh;
+    }
+}
